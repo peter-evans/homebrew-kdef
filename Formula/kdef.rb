@@ -5,21 +5,21 @@
 class Kdef < Formula
   desc "Declarative resource management for Kafka"
   homepage "https://github.com/peter-evans/kdef"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/peter-evans/kdef/releases/download/v0.0.1/kdef_0.0.1_darwin_x86_64.tar.gz"
-      sha256 "1f817c3a343d1e16f40323b6aa8a6e98ac6c66e8a93a700e5a6b4124bb683728"
+    if Hardware::CPU.arm?
+      url "https://github.com/peter-evans/kdef/releases/download/v0.0.2/kdef_0.0.2_darwin_arm64.tar.gz"
+      sha256 "02f9b2be79493345cffd027811d6eabf328874b27fcd0f904058f1cd3660de21"
 
       def install
         bin.install "kdef"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/peter-evans/kdef/releases/download/v0.0.1/kdef_0.0.1_darwin_arm64.tar.gz"
-      sha256 "5bbfcdea9b17c580f978fe0dd2b8eb41c85854afd95245a2bec799d86947beb6"
+    if Hardware::CPU.intel?
+      url "https://github.com/peter-evans/kdef/releases/download/v0.0.2/kdef_0.0.2_darwin_x86_64.tar.gz"
+      sha256 "927c3557bcbccfcbbbdc5b097b87db07fef243abe2cb031983150cbaa676384a"
 
       def install
         bin.install "kdef"
@@ -28,17 +28,17 @@ class Kdef < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/peter-evans/kdef/releases/download/v0.0.1/kdef_0.0.1_linux_arm64.tar.gz"
-      sha256 "761bc7d9c5d4776d6f8efc9ad2b3dba96a076a66daa514f850f12568f10aba5b"
+    if Hardware::CPU.intel?
+      url "https://github.com/peter-evans/kdef/releases/download/v0.0.2/kdef_0.0.2_linux_x86_64.tar.gz"
+      sha256 "645b1ad243a745d01a22d5aaad09bed69b763e72e3466ab940bca5bd9c496d7d"
 
       def install
         bin.install "kdef"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/peter-evans/kdef/releases/download/v0.0.1/kdef_0.0.1_linux_x86_64.tar.gz"
-      sha256 "56093ab5b5eb394bc3a234d1f31a834caec3109f979e05234fdd8217649af01e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/peter-evans/kdef/releases/download/v0.0.2/kdef_0.0.2_linux_arm64.tar.gz"
+      sha256 "19831a2d2aef972aed873b5b2c3e05810356732f67afad871fd070ef49ac42d6"
 
       def install
         bin.install "kdef"
