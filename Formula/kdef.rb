@@ -5,21 +5,21 @@
 class Kdef < Formula
   desc "Declarative resource management for Kafka"
   homepage "https://github.com/peter-evans/kdef"
-  version "0.0.3"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/peter-evans/kdef/releases/download/v0.0.3/kdef_0.0.3_darwin_x86_64.tar.gz"
-      sha256 "428088929b711f7fdbc6f97dac16bf2a2b581f69303dd219d7a0cc8bf8511420"
+      url "https://github.com/peter-evans/kdef/releases/download/v0.1.0/kdef_0.1.0_darwin_x86_64.tar.gz"
+      sha256 "f04cb41adcacddecc04a04e787e5f09bba295b942b507b7b1e7056c82326c024"
 
       def install
         bin.install "kdef"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/peter-evans/kdef/releases/download/v0.0.3/kdef_0.0.3_darwin_arm64.tar.gz"
-      sha256 "50034fdfd1ba06aadc3c6de80ee357c3aa1eb836a84877c67102c05a4717951b"
+      url "https://github.com/peter-evans/kdef/releases/download/v0.1.0/kdef_0.1.0_darwin_arm64.tar.gz"
+      sha256 "6de9b6edc56e4ef4b0f6b8c08f02b82498fe5897c55ca9e0f68aac95fa0737ad"
 
       def install
         bin.install "kdef"
@@ -29,16 +29,16 @@ class Kdef < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/peter-evans/kdef/releases/download/v0.0.3/kdef_0.0.3_linux_arm64.tar.gz"
-      sha256 "2193488cce71da17d409995b73d12b0504c0e56e676180743c0f8c7a4644fa89"
+      url "https://github.com/peter-evans/kdef/releases/download/v0.1.0/kdef_0.1.0_linux_arm64.tar.gz"
+      sha256 "44ddfe3026e0fd71969d109e825b42a3040a0cdfef784509231eb64a236da1e1"
 
       def install
         bin.install "kdef"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/peter-evans/kdef/releases/download/v0.0.3/kdef_0.0.3_linux_x86_64.tar.gz"
-      sha256 "651205884620b9f68cef0749027ffce45e6c556a824190c19b1ee273640ab59d"
+      url "https://github.com/peter-evans/kdef/releases/download/v0.1.0/kdef_0.1.0_linux_x86_64.tar.gz"
+      sha256 "7e38201ac85741d17281d443674c5c98acb9730181bfcb29dc40afb0b36cf2d1"
 
       def install
         bin.install "kdef"
